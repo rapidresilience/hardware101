@@ -9,6 +9,7 @@ sudo apt-get update && apt-get -y install minicom screen wget
 mkdir ~/tools && cd ~/tools
 wget https://downloads.saleae.com/logic2/Logic-2.4.14-linux-x64.AppImage
 chmod +x Logic-2.4.14-linux-x64.AppImage
+./Logic-2.4.14-linux-x64.AppImage --appimage-extract
 mv squashfs-root/ salealogic
 rm ./Logic-2.4.14-linux-x64.AppImage
 
