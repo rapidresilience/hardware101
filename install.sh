@@ -12,6 +12,7 @@ chmod +x Logic-2.4.14-linux-x64.AppImage
 ./Logic-2.4.14-linux-x64.AppImage --appimage-extract
 mv squashfs-root/ salealogic
 rm ./Logic-2.4.14-linux-x64.AppImage
+chown -R $(id -u):$(id -g) salealogic
 
 touch ~/Desktop/Logic.desktop
 cat > ~/Desktop/Logic.desktop <<EOL
