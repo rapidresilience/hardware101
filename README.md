@@ -59,7 +59,7 @@ how to install them.
 ### Installation
 
   ```sh
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/rapidresilience/hardware101/install.sh)"
+  curl -s -L https://raw.githubusercontent.com/rapidresilience/hardware101/main/install.sh | sudo bash
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
