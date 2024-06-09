@@ -13,7 +13,7 @@ chmod +x Logic-2.4.14-linux-x64.AppImage
 mv squashfs-root/ salealogic
 rm ./Logic-2.4.14-linux-x64.AppImage
 
-touch ~/Dekstop/Logic.desktop
+touch ~/Desktop/Logic.desktop
 cat > ~/Desktop/Logic.desktop <<EOL
 [Desktop Entry]
 Name=Logic
