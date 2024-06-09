@@ -3,7 +3,7 @@
 #Change to dark mode
 gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
 
-sudo apt-get update && apt-get -y install minicom screen wget git udev cmake build-essential
+sudo apt-get update && apt-get -y install minicom screen wget git udev cmake build-essential g++ libusb-1.0-0-dev qtbase5-dev qttools5-dev pkgconf
 
 #Installing Salea Logic
 mkdir ~/tools && cd ~/tools
