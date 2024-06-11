@@ -11,7 +11,9 @@ apt-get update && apt-get -y install minicom screen wget git udev cmake build-es
 EOF
 
 #Installing Salea Logic
-if [ -d ~/tools/salealogic ]; then
+if [ -d "~/tools/salealogic" ]; 
+then
+echo "Salea already installed"
 else
 echo "Installing Salea Logic"
 mkdir ~/tools && cd ~/tools
