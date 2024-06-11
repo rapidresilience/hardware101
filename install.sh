@@ -36,8 +36,7 @@ X-UnityGenerated=true
 EOL
 
 #Installing IMS Programmer
-curl https://github.com/bigbigmdm/IMSProg.git
-cd IMSProg_programmer
+git clone https://github.com/rapidresilience/IMSProg.git && cd IMSProg_programmer
 rm -rf build/
 mkdir build/
 cmake -S . -B build/
