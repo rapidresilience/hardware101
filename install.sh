@@ -8,6 +8,12 @@ sudo su - <<EOF
 #Update and install toosl
 echo "Installing tools"
 apt-get update && apt-get -y install minicom screen wget git udev cmake build-essential g++ libusb-1.0-0-dev qtbase5-dev qttools5-dev pkgconf
+
+#Installing IMS Programmer
+git clone https://github.com/rapidresilience/IMSProg.git && cd IMSProg
+./build_all.sh
+cd .. && rm -rf IMSProg
+
 EOF
 
 #Installing Salea Logic
@@ -36,8 +42,3 @@ Categories=Utility
 X-UnityGenerated=true
 EOL
 fi
-
-#Installing IMS Programmer
-git clone https://github.com/rapidresilience/IMSProg.git && cd IMSProg
-./build_all.sh
-cd .. && rm -rf IMSProg
