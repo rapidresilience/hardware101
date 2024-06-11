@@ -36,11 +36,11 @@ Categories=Utility
 X-UnityGenerated=true
 EOL
 
-sudo su <<EOF
-ln -s /home/$USER/tools/salealogic/Logic /usr/bin/logic
-sudo chmod ugo+x /usr/bin/logic
-EOF
-fi
+#sudo su <<EOF
+#ln -s /home/$USER/tools/salealogic/Logic /usr/bin/logic
+#sudo chmod ugo+x /usr/bin/logic
+#EOF
+#fi
 
 #Installing IMS Programmer
 if ! [ -x "$(command -v IMSProg)" ]; then
