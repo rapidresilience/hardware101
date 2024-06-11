@@ -52,7 +52,7 @@ This is an example of how to list things you need to use the software and
 how to install them.
 * curl
   ```sh
-  sudo apt get install -y curl
+  sudo apt-get install -y curl
   ```
 
 ### Installation
