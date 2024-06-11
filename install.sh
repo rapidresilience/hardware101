@@ -38,3 +38,4 @@ EOL
 #Installing IMS Programmer
 git clone https://github.com/rapidresilience/IMSProg.git && cd IMSProg_programmer
 ./build_all.sh
+cd .. && rm -rf IMSProg
