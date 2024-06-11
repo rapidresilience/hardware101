@@ -11,7 +11,8 @@ apt-get update && apt-get -y install minicom screen wget git udev cmake build-es
 EOF
 
 #Installing Salea Logic
-if ! [ -d "~/tools/salealogic" ]; then
+if [ -d ~/tools/salealogic ]; then
+else
 echo "Installing Salea Logic"
 mkdir ~/tools && cd ~/tools
 wget https://downloads.saleae.com/logic2/Logic-2.4.14-linux-x64.AppImage
