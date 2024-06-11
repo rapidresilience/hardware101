@@ -38,8 +38,10 @@ EOL
 fi
 
 #Installing IMS Programmer
-git clone https://github.com/rapidresilience/IMSProg.git && cd IMSProg
-sudo su << EOF
-./build_all.sh
-cd .. && rm -rf IMSProg
-EOF
+if ! [ -x "$(command -v IMSprog)" ]; then
+    git clone https://github.com/rapidresilience/IMSProg.git && cd IMSProg
+    sudo su << EOF
+    ./build_all.sh
+    cd .. && rm -rf IMSProg
+    EOF
+fi
