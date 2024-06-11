@@ -11,7 +11,7 @@ apt-get update && apt-get -y install minicom screen wget git udev cmake build-es
 EOF
 
 #Installing Salea Logic
-if ! [ -x "$(command -v Logic)" ]; then
+if ! [ -x "$(command -v logic)" ]; then
 echo "Installing Salea Logic"
 mkdir ~/tools && cd ~/tools
 wget https://downloads.saleae.com/logic2/Logic-2.4.14-linux-x64.AppImage
@@ -35,6 +35,10 @@ Comment=Debug hardware like a pro
 Categories=Utility
 X-UnityGenerated=true
 EOL
+
+sudo su <<EOF
+ln -s ~/tools/salealogic/Logic /usr/bin/logic
+EOF
 fi
 
 #Installing IMS Programmer
