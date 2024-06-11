@@ -37,19 +37,4 @@ EOL
 
 #Installing IMS Programmer
 git clone https://github.com/rapidresilience/IMSProg.git && cd IMSProg_programmer
-rm -rf build/
-mkdir build/
-cmake -S . -B build/
-cmake --build build/ --parallel 
-sudo cmake --install build/
-rm -rf build/
-cd .. #IMSProg
-cd IMSProg_editor
-rm -rf build/
-mkdir build/
-cmake -S . -B build/
-cmake --build build/ --parallel 
-sudo cmake --install build/
-rm -rf build/
-# Reloading the USB rules
-sudo udevadm control --reload-rules
+./build_all.sh
