@@ -40,8 +40,9 @@ fi
 #Installing IMS Programmer
 if ! [ -x "$(command -v IMSProg)" ]; then
 git clone https://github.com/rapidresilience/IMSProg.git && cd IMSProg
-sudo su <<EOF
+sudo su <<EOL
 ./build_all.sh
 cd .. && rm -rf IMSProg
-EOF
+EOL
+
 fi
