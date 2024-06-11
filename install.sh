@@ -12,8 +12,6 @@ EOF
 
 #Installing Salea Logic
 if ! [ -d "~/tools/salealogic" ]; then
-echo "Salea already installed"
-else
 echo "Installing Salea Logic"
 mkdir ~/tools && cd ~/tools
 wget https://downloads.saleae.com/logic2/Logic-2.4.14-linux-x64.AppImage
