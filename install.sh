@@ -1,11 +1,15 @@
 #!/bin/sudo bash
 
 #Change to dark mode
+echo "Modifying settings"
 gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
 
+#Update and install toosl
+echo "Installing tools"
 sudo apt-get update && apt-get -y install minicom screen wget git udev cmake build-essential g++ libusb-1.0-0-dev qtbase5-dev qttools5-dev pkgconf
 
 #Installing Salea Logic
+echo "Installing Salea Logic"
 mkdir ~/tools && cd ~/tools
 wget https://downloads.saleae.com/logic2/Logic-2.4.14-linux-x64.AppImage
 chmod +x Logic-2.4.14-linux-x64.AppImage
