@@ -41,7 +41,7 @@ fi
 if ! [ -x "$(command -v IMSProg)" ]; then
 git clone https://github.com/rapidresilience/IMSProg.git && cd IMSProg
 sudo su <<EOF
-./build_all.sh
+./build_all.sh && cd .. && rm -rf IMSProg
 EOF
-cd .. && rm -rf IMSProg
+
 fi
