@@ -36,10 +36,13 @@ Categories=Utility
 X-UnityGenerated=true
 EOL
 
+cat ~/tools/salealogic/resources/linux-x64/99-SaleaeLogic.rules | sudo tee /etc/udev/rules.d/99-SaleaeLogic.rules > /dev/null && echo "finished installing /etc/udev/rules.d/99-SaleaeLogic.rules"
+
 #sudo su <<EOF
 #ln -s /home/$USER/tools/salealogic/Logic /usr/bin/logic
 #sudo chmod ugo+x /usr/bin/logic
 #EOF
+
 fi
 
 #Installing IMS Programmer
