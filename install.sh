@@ -45,13 +45,11 @@ cat ~/tools/salealogic/resources/linux-x64/99-SaleaeLogic.rules | sudo tee /etc/
 
 fi
 
-#Installing IMS Programmer
+#Installing IMS Programmer & cyberchef
 if ! [ -x "$(command -v IMSProg)" ]; then
 git clone https://github.com/rapidresilience/IMSProg.git && cd IMSProg
 sudo su <<EOF
 ./build_all.sh && cd .. && rm -rf IMSProg
+snap install cyberchef
 EOF
 fi
-
-#Installing cyberchef
-snap install cyberchef
