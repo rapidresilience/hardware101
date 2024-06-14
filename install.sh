@@ -11,7 +11,7 @@ sudo su - <<EOF
 echo "Installing tools"
 apt-get update && apt-get -y install minicom screen wget git udev cmake build-essential g++ libusb-1.0-0-dev qtbase5-dev qttools5-dev pkgconf file zsh hexedit xxd binutils binwalk flashrom git-core fonts-powerline
 wget https://raw.githubusercontent.com/rapidresilience/ohmyzsh/master/tools/install.sh
-sh install.sh
+REPO=rapidresilience/ohmyzsh sh install.sh
 EOF
 
 #Installing Salea Logic
