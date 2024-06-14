@@ -9,8 +9,9 @@ gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
 sudo su - <<EOF
 #Update and install toosl
 echo "Installing tools"
-apt-get update && apt-get -y install minicom screen wget git udev cmake build-essential g++ libusb-1.0-0-dev qtbase5-dev qttools5-dev pkgconf file zsh hexedit xxd binutils binwalk flashrom
-chsh -s /usr/bin/zsh
+apt-get update && apt-get -y install minicom screen wget git udev cmake build-essential g++ libusb-1.0-0-dev qtbase5-dev qttools5-dev pkgconf file zsh hexedit xxd binutils binwalk flashrom git-core fonts-powerline
+wget https://raw.githubusercontent.com/rapidresilience/ohmyzsh/master/tools/install.sh
+sh install.sh
 EOF
 
 #Installing Salea Logic
