@@ -28,7 +28,7 @@ if ! [ -x "$(command -v logic)" ]; then
 echo -e "${YELLOW}Installing Salea Logic${NC}"
 sleep 2s
 mkdir ~/tools && cd ~/tools
-wget https://downloads.saleae.com/logic2/Logic-2.4.14-linux-x64.AppImage 2>&1 > /dev/null
+wget -q https://downloads.saleae.com/logic2/Logic-2.4.14-linux-x64.AppImage
 chmod +x Logic-2.4.14-linux-x64.AppImage
 ./Logic-2.4.14-linux-x64.AppImage --appimage-extract 2>&1 > /dev/null
 mv squashfs-root/ salealogic
@@ -63,7 +63,7 @@ fi
 if ! [ -x "$(command -v IMSProg)" ]; then
 echo -e "${YELLOW}Installing IMS Programmer${NC}"
 sleep 2s
-git clone https://github.com/rapidresilience/IMSProg.git 2>&1 > /dev/null && cd IMSProg
+git clone --quiet https://github.com/rapidresilience/IMSProg.git 2>&1 > /dev/null && cd IMSProg
 sudo su <<EOF
 ./build_all.sh 2>&1 > /dev/null && cd .. && rm -rf IMSProg
 EOF
