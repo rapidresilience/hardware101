@@ -74,6 +74,6 @@ fi
 echo -e "${YELLOW}Installing Cyberchef${NC}"
 sleep 2s
 sudo su <<EOF
-snap install cyberchef
+cd ~ && snap install cyberchef
 EOF
 echo -e "${GREEN}Done${NC}"
