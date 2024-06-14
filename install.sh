@@ -28,9 +28,9 @@ if ! [ -x "$(command -v logic)" ]; then
 echo -e "${YELLOW}Installing Salea Logic${NC}"
 sleep 2s
 mkdir ~/tools && cd ~/tools
-wget https://downloads.saleae.com/logic2/Logic-2.4.14-linux-x64.AppImage 
+wget https://downloads.saleae.com/logic2/Logic-2.4.14-linux-x64.AppImage 2>&1 > /dev/null
 chmod +x Logic-2.4.14-linux-x64.AppImage
-./Logic-2.4.14-linux-x64.AppImage --appimage-extract >> install_log.txt 2>&1
+./Logic-2.4.14-linux-x64.AppImage --appimage-extract 2>&1 > /dev/null
 mv squashfs-root/ salealogic
 rm ./Logic-2.4.14-linux-x64.AppImage
 chown -R $(id -u):$(id -g) salealogic
@@ -50,7 +50,7 @@ Categories=Utility
 X-UnityGenerated=true
 EOL
 
-cat ~/tools/salealogic/resources/linux-x64/99-SaleaeLogic.rules | sudo tee /etc/udev/rules.d/99-SaleaeLogic.rules > /dev/null && echo "finished installing /etc/udev/rules.d/99-SaleaeLogic.rules"
+cat ~/tools/salealogic/resources/linux-x64/99-SaleaeLogic.rules | sudo tee /etc/udev/rules.d/99-SaleaeLogic.rules > /dev/null
 
 #sudo su <<EOF
 #ln -s /home/$USER/tools/salealogic/Logic /usr/bin/logic
