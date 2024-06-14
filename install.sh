@@ -63,7 +63,7 @@ fi
 if ! [ -x "$(command -v IMSProg)" ]; then
 echo -e "${YELLOW}Installing IMS Programmer${NC}"
 sleep 2s
-git clone https://github.com/rapidresilience/IMSProg.git && cd IMSProg
+git clone https://github.com/rapidresilience/IMSProg.git 2>&1 > /dev/null && cd IMSProg
 sudo su <<EOF
 ./build_all.sh 2>&1 > /dev/null && cd .. && rm -rf IMSProg
 EOF
