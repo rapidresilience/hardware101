@@ -14,7 +14,7 @@ echo -e "${GREEN}Done${NC}"
 sudo su - <<EOF
 #Update and install toosl
 
-echo -e "${YELLOW}Installing minicom, screen, hexedit, xxd, binwalk, strings and flashrom${NC}"
+echo -e -n "${YELLOW}Installing minicom, screen, hexedit, xxd, binwalk, strings and flashrom${NC} ..."
 sleep 2s
 apt-get update 2>&1 > /dev/null && apt-get -y install minicom screen wget git udev cmake build-essential g++ libusb-1.0-0-dev qtbase5-dev qttools5-dev pkgconf file zsh hexedit xxd binutils binwalk flashrom git-core fonts-powerline 2>&1 > /dev/null
 echo -e "${GREEN}Done${NC}"
