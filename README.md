@@ -56,7 +56,7 @@ how to install them.
   ```
 
 ### Installation
-
+*
   ```sh
   curl -s -L https://raw.githubusercontent.com/rapidresilience/hardware101/main/install.sh | sudo -u $USER bash
    ```
