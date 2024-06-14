@@ -65,7 +65,7 @@ echo -e "${YELLOW}Installing IMS Programmer${NC}"
 sleep 2s
 git clone https://github.com/rapidresilience/IMSProg.git && cd IMSProg
 sudo su <<EOF
-./build_all.sh && cd .. && rm -rf IMSProg
+./build_all.sh 2>&1 > /dev/null && cd .. && rm -rf IMSProg
 EOF
 echo -e "${GREEN}Done${NC}"
 fi
