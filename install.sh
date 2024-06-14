@@ -1,16 +1,23 @@
 #!/bin/sudo bash
 
-#Change to dark mode
-echo "Modifying settings"
-gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
+RED='\033[0;31m'
+YELLOW='\033[1;33m'
+GREEN='\033[1;32m'
+NC='\033[0m' # No Color
 
+#Change to dark mode
+echo -e "${YELLOW}Modifying settings${NC}"
+gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
+echo -e "${GREEN}Done${NC}"
 #To Do:
 
 sudo su - <<EOF
 #Update and install toosl
-echo "Installing minicom, screen, hexedit, xxd, binwalk, strings and flashrom"
+
+echo -e "${YELLOW}Installing minicom, screen, hexedit, xxd, binwalk, strings and flashrom${NC}"
 sleep 2s
-apt-get update > install_log.txt 2>&1 && apt-get -y install minicom screen wget git udev cmake build-essential g++ libusb-1.0-0-dev qtbase5-dev qttools5-dev pkgconf file zsh hexedit xxd binutils binwalk flashrom git-core fonts-powerline >> install_log.txt 2>&1
+apt-get update 2>&1 > /dev/null && apt-get -y install minicom screen wget git udev cmake build-essential g++ libusb-1.0-0-dev qtbase5-dev qttools5-dev pkgconf file zsh hexedit xxd binutils binwalk flashrom git-core fonts-powerline 2>&1 > /dev/null
+echo -e "${GREEN}Done${NC}"
 EOF
 
 #wget https://raw.githubusercontent.com/rapidresilience/ohmyzsh/master/tools/install.sh
