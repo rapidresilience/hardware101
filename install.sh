@@ -6,7 +6,7 @@ GREEN='\033[1;32m'
 NC='\033[0m' # No Color
 
 #Change to dark mode
-echo -e "${YELLOW}Modifying settings${NC}"
+echo -e -n "${YELLOW}Modifying settings${NC} ..."
 #gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
 echo -e "${GREEN}Done${NC}"
 #To Do:
