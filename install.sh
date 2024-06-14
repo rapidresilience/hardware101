@@ -7,7 +7,7 @@ NC='\033[0m' # No Color
 
 #Change to dark mode
 echo -e "${YELLOW}Modifying settings${NC}"
-gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
+#gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
 echo -e "${GREEN}Done${NC}"
 #To Do:
 
@@ -25,7 +25,7 @@ EOF
 
 #Installing Salea Logic
 if ! [ -x "$(command -v logic)" ]; then
-echo "Installing Salea Logic"
+echo -e "${YELLOW}Installing Salea Logic${NC}"
 sleep 2s
 mkdir ~/tools && cd ~/tools
 wget https://downloads.saleae.com/logic2/Logic-2.4.14-linux-x64.AppImage 
@@ -56,22 +56,24 @@ cat ~/tools/salealogic/resources/linux-x64/99-SaleaeLogic.rules | sudo tee /etc/
 #ln -s /home/$USER/tools/salealogic/Logic /usr/bin/logic
 #sudo chmod ugo+x /usr/bin/logic
 #EOF
-
+echo -e "${GREEN}Done${NC}"
 fi
 
 #Installing IMS Programmer
 if ! [ -x "$(command -v IMSProg)" ]; then
-echo "Installing IMS Programmer"
+echo -e "${YELLOW}Installing IMS Programmer${NC}"
 sleep 2s
 git clone https://github.com/rapidresilience/IMSProg.git && cd IMSProg
 sudo su <<EOF
 ./build_all.sh && cd .. && rm -rf IMSProg
 EOF
+echo -e "${GREEN}Done${NC}"
 fi
 
 #Installing cyberchef
-echo "Installing Cyberchef"
+echo -e "${YELLOW}Installing Cyberchef${NC}"
 sleep 2s
 sudo su <<EOF
 snap install cyberchef
 EOF
+echo -e "${GREEN}Done${NC}"
