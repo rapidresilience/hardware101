@@ -12,8 +12,6 @@ echo "Installing tools"
 apt-get update && apt-get -y install minicom screen wget git udev cmake build-essential g++ libusb-1.0-0-dev qtbase5-dev qttools5-dev pkgconf file zsh hexedit xxd binutils binwalk flashrom
 chsh -s /usr/bin/zsh
 EOF
-#sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sed 's:env zsh -l::g' | sed 's:chsh -s .*$::g')"
-
 
 #Installing Salea Logic
 if ! [ -x "$(command -v logic)" ]; then
