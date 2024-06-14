@@ -8,7 +8,8 @@ gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
 
 sudo su - <<EOF
 #Update and install toosl
-echo "Installing tools"
+echo "Installing minicom, screen, hexedit, xxd, binwalk, strings and flashrom"
+sleep 2s
 apt-get update && apt-get -y install minicom screen wget git udev cmake build-essential g++ libusb-1.0-0-dev qtbase5-dev qttools5-dev pkgconf file zsh hexedit xxd binutils binwalk flashrom git-core fonts-powerline
 EOF
 
@@ -18,6 +19,7 @@ EOF
 #Installing Salea Logic
 if ! [ -x "$(command -v logic)" ]; then
 echo "Installing Salea Logic"
+sleep 2s
 mkdir ~/tools && cd ~/tools
 wget https://downloads.saleae.com/logic2/Logic-2.4.14-linux-x64.AppImage
 chmod +x Logic-2.4.14-linux-x64.AppImage
@@ -52,6 +54,8 @@ fi
 
 #Installing IMS Programmer
 if ! [ -x "$(command -v IMSProg)" ]; then
+echo "Installing IMS Programmer"
+sleep 2s
 git clone https://github.com/rapidresilience/IMSProg.git && cd IMSProg
 sudo su <<EOF
 ./build_all.sh && cd .. && rm -rf IMSProg
@@ -59,6 +63,8 @@ EOF
 fi
 
 #Installing cyberchef
+echo "Installing Cyberchef"
+sleep 2s
 sudo su <<EOF
 snap install cyberchef
 EOF
