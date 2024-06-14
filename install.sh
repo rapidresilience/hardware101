@@ -6,7 +6,7 @@ GREEN='\033[1;32m'
 NC='\033[0m' # No Color
 
 #Change to dark mode
-echo -e -n "${YELLOW}Modifying settings${NC} ..."
+echo -e -n "${YELLOW}Modifying settings${NC} ... "
 #gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
 echo -e "${GREEN}Done${NC}"
 #To Do:
@@ -14,7 +14,7 @@ echo -e "${GREEN}Done${NC}"
 sudo su - <<EOF
 #Update and install toosl
 
-echo -e -n "${YELLOW}Installing minicom, screen, hexedit, xxd, binwalk, strings and flashrom${NC} ..."
+echo -e -n "${YELLOW}Installing minicom, screen, hexedit, xxd, binwalk, strings and flashrom${NC} ... "
 sleep 2s
 apt-get update 2>&1 > /dev/null && apt-get -y install minicom screen wget git udev cmake build-essential g++ libusb-1.0-0-dev qtbase5-dev qttools5-dev pkgconf file zsh hexedit xxd binutils binwalk flashrom git-core fonts-powerline 2>&1 > /dev/null
 echo -e "${GREEN}Done${NC}"
@@ -25,7 +25,7 @@ EOF
 
 #Installing Salea Logic
 if ! [ -x "$(command -v logic)" ]; then
-echo -e "${YELLOW}Installing Salea Logic${NC}"
+echo -e -n "${YELLOW}Installing Salea Logic${NC} ... "
 sleep 2s
 mkdir ~/tools && cd ~/tools
 wget -q https://downloads.saleae.com/logic2/Logic-2.4.14-linux-x64.AppImage
@@ -61,7 +61,7 @@ fi
 
 #Installing IMS Programmer
 if ! [ -x "$(command -v IMSProg)" ]; then
-echo -e "${YELLOW}Installing IMS Programmer${NC}"
+echo -e -n "${YELLOW}Installing IMS Programmer${NC} ... "
 sleep 2s
 git clone --quiet https://github.com/rapidresilience/IMSProg.git 2>&1 > /dev/null && cd IMSProg
 sudo su <<EOF
@@ -71,7 +71,7 @@ echo -e "${GREEN}Done${NC}"
 fi
 
 #Installing cyberchef
-echo -e "${YELLOW}Installing Cyberchef${NC}"
+echo -e -n "${YELLOW}Installing Cyberchef${NC} ... "
 sleep 2s
 sudo su <<EOF
 cd ~ && snap install cyberchef
