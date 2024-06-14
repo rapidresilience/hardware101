@@ -10,7 +10,7 @@ sudo su - <<EOF
 #Update and install toosl
 echo "Installing minicom, screen, hexedit, xxd, binwalk, strings and flashrom"
 sleep 2s
-apt-get update && apt-get -y install minicom screen wget git udev cmake build-essential g++ libusb-1.0-0-dev qtbase5-dev qttools5-dev pkgconf file zsh hexedit xxd binutils binwalk flashrom git-core fonts-powerline
+apt-get update > install_log.txt 2>&1 && apt-get -y install minicom screen wget git udev cmake build-essential g++ libusb-1.0-0-dev qtbase5-dev qttools5-dev pkgconf file zsh hexedit xxd binutils binwalk flashrom git-core fonts-powerline >> install_log.txt 2>&1
 EOF
 
 #wget https://raw.githubusercontent.com/rapidresilience/ohmyzsh/master/tools/install.sh
@@ -21,9 +21,9 @@ if ! [ -x "$(command -v logic)" ]; then
 echo "Installing Salea Logic"
 sleep 2s
 mkdir ~/tools && cd ~/tools
-wget https://downloads.saleae.com/logic2/Logic-2.4.14-linux-x64.AppImage
+wget https://downloads.saleae.com/logic2/Logic-2.4.14-linux-x64.AppImage 
 chmod +x Logic-2.4.14-linux-x64.AppImage
-./Logic-2.4.14-linux-x64.AppImage --appimage-extract
+./Logic-2.4.14-linux-x64.AppImage --appimage-extract >> install_log.txt 2>&1
 mv squashfs-root/ salealogic
 rm ./Logic-2.4.14-linux-x64.AppImage
 chown -R $(id -u):$(id -g) salealogic
