@@ -71,10 +71,10 @@ echo -e "${GREEN}Done${NC}"
 fi
 
 #Installing snaps
-echo -e -n "${YELLOW}Installing Snaps${NC} ... "
+echo -e -n "${YELLOW}Installing snaps${NC} ... "
 sleep 2s
 sudo su <<EOF
-snap install librepcb, cyberchef
+snap install librepcb cyberchef
 EOF
 echo -e "${GREEN}Done${NC}"
 
