@@ -46,7 +46,7 @@ This is an example of how you may give instructions on setting up your
 project locally.
 To get a local copy up and running follow these simple example steps.
 
-<!-- ### Prerequisites -->
+<!-- ### Prerequisites
 
 This is an example of how to list things you need to use the software and 
 how to install them.
@@ -54,11 +54,11 @@ how to install them.
   ```sh
   sudo apt-get install -y curl
   ```
-
+-->
 ### Installation
 *
   ```sh
-  curl -s -L https://raw.githubusercontent.com/rapidresilience/hardware101/main/install.sh | bash
+  wget https://raw.githubusercontent.com/rapidresilience/hardware101/main/install.sh -O - | bash
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
